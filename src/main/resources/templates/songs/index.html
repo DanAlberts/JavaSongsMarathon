@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Song List</title>
+</head>
+<body>
+
+<h1>List of Songs</h1>
+
+<ul>
+  <li th:each="song : ${songs}">
+    <strong th:text="${song.songTitle}"></strong><br>
+    Genre: <span th:text="${song.genre}"></span><br>
+    Release Year: <span th:text="${song.releaseYear}"></span><br>
+    Explicit Content: <span th:text="${song.explicitContent}"></span><br>
+  </li>
+
+</ul>
+
+</body>
+</html>
